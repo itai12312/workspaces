@@ -1,0 +1,39 @@
+Dvorak sytle keyboard, just for hebrew(maybe for english too?)-
+1.by thingking about it a little bit
+2. by using genetic algorithm and neural network
+
+http://www.utest.com/-company
+
+graphic visualzation
+
+programming-not relavent, done in english
+shortcuts-do when press "ctrl" will temporarly revert to old keyboard,not relavent
+finger travel
+hand alteration
+same finger frequency
+%of words, letters-freq in home row,if having to reach out for frequent letters
+how easy is is to type frequent bigrams(2-letter combinations)
+captalization-not relavent
+
+
+
+http://www.workmanlayout.com/blog/
+more stuff:
+Movement on the Keyboard
+The home keys (not necessarily the home row) are the place to be
+Vertical movement between the columns (reaching and folding) are not necessarily strenuous on the fingers and wrists because it is more natural for the fingers to fold or stretch vertically than horizontally
+Side-to-side movements are more strenuous for the wrists than up and down motion
+Diagonally reaching for the top and bottom middle keys are the worst
+Fingers
+Index Finger: very strong, short
+Middle Finger: strong, very long
+Ring Finger: weak, long
+Pinky Finger: weak, short
+
+Most of these seem obvious enough but it helps to jot them down for clarity. I then came up with a set of principles to serve as guidelines to help me with the design:
+
+Prioritize the home keys
+If vertical folding and reaching cannot be prevented, prioritize reaching for longer fingers and folding for shorter fingers.
+Place more frequent keys under stronger fingers
+Common bigrams should be easy to type.
+

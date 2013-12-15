@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:id="@+id/Employee"
+	android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:id="@+id/MainLayout">
+
+		<TextView android:id="@+id/EmployeeName"
+			android:layout_alignLeft="@id/MainLayout" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<TextView android:id="@+id/EmployeeDesignation"
+			android:layout_alignParentRight="true" android:layout_toRightOf="@id/EmployeeName"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	</RelativeLayout>
+</ListView>

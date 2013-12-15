@@ -1,0 +1,17 @@
+String mar[]=line.split(",");
+
+
+for(int i=0;i<mar.length;i++)
+   System.out.println(mar[i]);
+
+
+int x=Integer.parseInt(mar[0]);
+
+
+double d=Double.parseDouble(mar[1]);
+
+
+float f=Float.parseFloat(mar[2]); 
+
+ 
+

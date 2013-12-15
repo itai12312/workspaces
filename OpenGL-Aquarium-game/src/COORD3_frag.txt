@@ -1,0 +1,10 @@
+#version 120
+
+varying float depth;
+
+void main (void)  
+{
+	vec4 bkg = vec4(0.0,0.0,1.0,0.0);
+	vec4 color = vec4(1.0,0.0,0.0,0.0);
+   	gl_FragColor = color*exp(-depth)+bkg*(1-exp(-depth));  
+}

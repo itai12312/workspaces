@@ -1,0 +1,28 @@
+#version 120
+
+uniform vec3 cam_pos;
+uniform vec3 cam_rot;
+attribute vec3 pos;
+varying float depth;
+void main(void)
+{
+   	float oldX,oldY,oldZ;
+	float newX,newY,newZ;
+	vec3 newPos;
+	oldX=pos.x-cam_pos.x;
+	oldY=pos.y-cam_pos.y;
+	oldZ=pos.z-cam_pos.z;
+	newY=oldY*cos(cam_rot.x)+oldZ*sin(cam_rot.x);
+	newZ=oldY*sin(cam_rot.x)+oldZ*cos(cam_rot.x);
+	oldY=newY;
+	oldZ=newZ;
+	newX=oldX*cos(cam_rot.y)+oldZ*sin(cam_rot.y);
+	newZ=oldX*sin(cam_rot.y)+oldZ*cos(cam_rot.y);
+	oldX=newX;
+	newX=oldX*cos(cam_rot.z)+oldY*sin(cam_rot.z);
+	newY=oldX*sin(cam_rot.z)+oldY*cos(cam_rot.z);
+	newPos = vec3(newX,newY,newZ);
+	
+   gl_Position = vec4(newPos.x,newPos.y,newPos.z/(-1-newPos.z),newPos.z);
+   depth = newPos.z;
+}  

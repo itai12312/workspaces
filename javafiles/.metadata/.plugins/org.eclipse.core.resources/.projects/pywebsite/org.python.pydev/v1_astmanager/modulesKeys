@@ -1,0 +1,6 @@
+MODULES_MANAGER_V2
+manage|/home/itai/workspaces/java/pywebsite/manage.py
+pywebsite.__init__|/home/itai/workspaces/java/pywebsite/pywebsite/__init__.py
+pywebsite.settings|/home/itai/workspaces/java/pywebsite/pywebsite/settings.py
+pywebsite.urls|/home/itai/workspaces/java/pywebsite/pywebsite/urls.py
+pywebsite.wsgi|/home/itai/workspaces/java/pywebsite/pywebsite/wsgi.py

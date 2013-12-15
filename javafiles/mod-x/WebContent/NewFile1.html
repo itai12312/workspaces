@@ -1,0 +1,115 @@
+
+
+<html>
+
+<head>
+<title>www.disavowed.net</title>
+
+<meta name="description" content="Mod-X online security challenge...do you have what it takes?">
+<meta name="keywords" content="modx, mod-x, security, software, utilities, news, game, challenge, test, skills, hacker, challenge, game, hacker challenge, hacker game, puzzle, hack, crack,reverse engineer, encryption, role, playing, play network, wang, products, wangproducts">
+
+<link rel="SHORTCUT ICON" href="/favicon.ico">
+
+<!-- ULTIMATE DROP DOWN MENU Version 4.42 by Brothercake -->
+<!-- http://www.udm4.com/ -->
+<link rel="stylesheet" type="text/css" href="/menubar/udm-style_disa.php" media="screen, projection" />
+
+</head>
+<body bgcolor="#333333" text="#00FF00" link="#00FF00" vlink="#00FF00" alink="#00FF00">
+
+
+<script type="text/javascript" src="/menubar/udm-dom_disa.php"></script>
+
+<SCRIPT type="text/javaScript">
+<!--
+al="`1234567890-=~!@#$%^&*()_+qwer"
++"tyuiop[]QWERTYUIOP{}|asdfghjkl;A"
++"SDFGHJKL:zxcvbnm,./ZXCVBNM<>?";
+ab1="";
+bctr=0;
+function ckPwd(){
+ tst=document.isn.username.value
+ +"*"+document.isn.passwrd.value+"*";
+ alert("tst="+tst);
+ ls=document.pd.pe.value;
+ 
+ a=eval(ls.substring(0,2))-91;
+
+ ls=ls.substring(2,ls.length);
+ 
+ nls="";
+ flg=0;
+ while (ls.length>12){
+	
+  ab=eval(ls.substring(0,2))-89;
+ 
+  ab1=(ab1==""?""+ab:ab1);
+
+  oab1=ab1;
+
+  ls=ls.substring(2,ls.length);
+  
+  for (var i=0;i<ab;i++){
+	
+   nr=eval(ls.substring(0,2))-a;
+   
+   ls=ls.substring(2,ls.length);
+  
+   nls+=al.charAt(nr);
+  
+   }
+  nls+="*";
+  alert("nls="+nls+"tst="+tst);
+  if (nls.indexOf(tst)>-1){
+   ls="";
+   flg=1;
+   }
+  }
+ if (flg==1){
+  tstOk();
+  }
+ else{
+  bctr++;
+  if (bctr>3){
+   location.href="wrongpage.php";
+   }
+  else{
+   alert("Sorr</abad Username or Password."
+   +" Failed Attempt #"+bctr+".");
+   }
+  }
+ }
+
+function tstOk(){
+ ab1=ab1+""+a;
+  alert("OK. You Entered a Valid Username and Password, "
+  +document.isn.username.value+"! Taking you to the"
+  +" restricted page as soon as you click OK.");
+  location.href="pwdss.php?"+ab1;
+ }
+
+function srand() {
+ today=new Date();
+ rand=today.getTime();
+ picker=""+rand
+ picker=picker.charAt((picker.length-4));
+ rec=eval(picker);
+ }
+// -->
+</SCRIPT>
+
+<FORM NAME="pd">
+<INPUT TYPE='hidden' NAME='pe' VALUE='9999621534361185176113439965168437841040414209'>
+</FORM>
+
+
+<INPUT TYPE="text" NAME="username" VALUE="" SIZE=20 STYLE="font-family: Courier New; font-size: 10pt">
+<INPUT TYPE="text" NAME="passwrd" VALUE="" SIZE=20 STYLE="font-family: Courier New; font-size: 10pt">
+<INPUT TYPE="button" NAME="submit" VALUE=" Submit " STYLE="font-family: Courier New; font-size: 10pt; font-weight: bold" onClick="ckPwd()">
+<SCRIPT type="text/javaScript">
+<!-- 
+document.isn.username.focus();
+// -->
+</SCRIPT>
+</body>
+</html>

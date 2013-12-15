@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+	<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="Your total is 0"
+    android:id="@+id/tvNumber"
+    android:textSize="40dp"
+    android:gravity="center"
+    />
+    <Button
+    android:layout_width="wrap_content"
+   android:layout_height="wrap_content"  
+    android:background="@drawable/custom"
+    android:id="@+id/bAddOne"
+    android:layout_gravity="center"
+    />
+      <Button
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:text="Subtract One"
+    android:id="@+id/bSubOne"
+    android:layout_gravity="center"
+    />
+
+	<com.google.ads.AdView android:id="@+id/ad"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	ads:adUnitId="YOUR_ADMOB_ID"
+	ads:loadAdOnCreate="true"
+	ads:adSize="BANNER"
+	/>
+
+</LinearLayout>

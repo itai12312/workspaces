@@ -1,0 +1,50 @@
+Guarantees for encode/decode:
+
+Forall x in the domain:
+1. decode(encode(x)) = x
+2. encode(x) < domain.size()
+
+From 1, encode is one-one. From 2, it is onto.
+Encode/decode omits sols excluded by limiters.
+The ordering of the elements by decode doesn't
+necessarily correspont to the order they're
+returned in by the iterator.
+
+TODO
+change encoding of permutations to be onto.
+dis-support encoding in presence of limiters.
+
+
+DFS/BFS:
+Table variants use bitmap to remember visited nodes.
+TableBFS 	will explore all layers shorter than the solution.
+			and without back edges, will do so twice (to reconstruct
+			the path).
+			It needs a single layer of the graph (bit per node) in
+			memory. others can be stored to disk.
+			It needs a layering procedure (node -> layer).
+HashBFS		will explore all routes shorter than the solution.
+			It needs in memory all the nodes closer than the solution
+			(as a map node -> previuos).
+DagDFS		will only find routes up to the given radius.
+			will explore up to the given radius, maybe multiple times (if
+			there are multiple routes to each node).
+			It needs in memory the longest route possible.
+			Equivalent to running over strings upto the given
+			length.
+TableDFS	will explore the whole graph, but only once, even without
+			back-edges.
+			It needs in memory one bit per node.
+			It needs a maximal possible path length (usually not a problem).
+
+Short Solution - Most nodes are farther than the target
+Small Graph - We can store 1 bit per node in memory
+Layered - We can enumerate (encode/decode) the nodes
+          in every layer of the graph and can store 1
+          bit per node in layer in memory. Also, the
+          edges function will only return nodes deeper
+          than the argument. 
+
+HashBFS		Short Solution
+TableDFS	Far   Solution  Small Graph
+TableBFS	Far   Solution  Big   Graph  Layered
