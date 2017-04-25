@@ -43,6 +43,8 @@ import time
 * never gonna run around and desert you. Never gonna make you cry,
 * never gonna say goodbye. Never gonna tell a lie and hurt you.
 """
+strheb=u"אבגדהוזחטיכךלמםנןסעפףצץקרשת"
+strheb+="qw"
 originalkeyboard=[4,22,12,11,23,6,20,16,5,15,13,18,17,25,8,24,7,11,14,9,19,16,18,2,3,10,17,0,1]
 heb=[u"א",u"ב",u"ג",u"ד",u"ה",u"ו",u"ז",u"ח",u"ט",u"י",u"כ",u"ך",u"ל",u"מ",u"ם",u"נ",u"ן",u"ס",u"ע",u"פ",u"ף",u"צ",u"ץ",u"ק",u"ר",u"ש",u"ת",u"/",u"'"]
 frequneciesletters=[4.94,4.98,1.26,2.59,8.18,10.00,0.88,2.36,1.08,10.78,2.29,0.41,6.29,4.75,2.85,3.34,1.27,1.55,2.97,1.79,0.19,1.28,0.14,1.95,5.42,4.55,5.32,0.0,0.0]
@@ -124,11 +126,11 @@ def sigmausage(array,keyboard):
 # 10=bigrams(relative to freqeuncy) that can be typed in level 1+1.5
 # 11=number of letters changed from currect location
 
-sampletxt=open("a.txt","r")
-data=sampletxt.read()
+sampletxt=open("ab","r")
+data1=sampletxt.read()
 sampletxt.close()
-data=unicode(data,"UTF-16")[:len(data)/10]
-
+#data=unicode(data,"UTF-16")[:len(data)/10]
+data = ''.join(ch for ch in data1 if ch in "קראטוןםפשדגכעיחלךףזסבהנמצתץ")
 letter_index={}
 for i in range(len(heb)):
     letter_index[heb[i]]=i
@@ -168,8 +170,8 @@ def fitness(keyboard):
             dist+=distance(lettertoindex(data[i]))
             relativedist+=distancerelative(lettertoindex(data[i]))
     #print time.clock()-a
-    values[3]=handchanges/handtotal
-    values[4]=fingerchanges/fingertotal
+    values[3]=handchanges/handtotal if handtotal !=0 else 0
+    values[4]=fingerchanges/fingertotal if fingertotal!= 0 else 0
     
     values[5]=values[2]
     
@@ -228,10 +230,35 @@ def nextgeneration(keyboardarray):
 #def start():
 
 #print type(heb[0])
-
 keyboards34=firstgenrator(keyboards34)
-for i in range(0,5):
+for i in range(0,3):
     keyboards34=nextgeneration(keyboards34)
     #p = list(keyboards1)
     #p.sort(reverse=True)
-print keyboards34
+print(keyboards34)
+
+def keyboardtoprint(arr):
+    first10 = []
+    second10 = []
+    last6 = []
+    for i in range(0,10):
+        for k in range(len(arr)):
+            if arr[k] == i:
+                first10.append(strheb[k])
+
+    for i in range(11,20):
+        for k in range(len(arr)):
+            if arr[k] == i:
+                second10.append(strheb[k])
+
+    for i in range(21,27):
+        for k in range(len(arr)):
+            if arr[k] == i:
+                last6.append(strheb[k])
+
+    print first10
+    print second10
+    print last6
+
+keyboardtoprint(keyboards34[-1])
+c=5
