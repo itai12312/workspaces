@@ -2,47 +2,6 @@
 import math
 import random
 import time
-#When I wrote this, only God and I understood what I was doing
-#Now, God only knows
-
-# Magic. Do not touch.
-
-# sometimes I believe compiler ignores all my comments
-
-#return to that late, have to finish hw in analiza numerit
-""" 
-// Dear maintainer:
-// 
-// Once you are done trying to 'optimize' this routine,
-// and have realized what a terrible mistake that was,
-// please increment the following counter as a warning
-// to the next guy:
-// 
-// total_hours_wasted_here = 42
-"""
-#// If this comment is removed the program will blow up
-
-"""
-/*
- * You may think you know what the following code does.
- * But you dont. Trust me.
- * Fiddle with it, and youll spend many a sleepless
- * night cursing the moment you thought youd be clever
- * enough to "optimize" the code below.
- * Now close this file and go play with something else.
- */ 
-
-"""
-
-
-"""
-* For the brave souls who get this far: You are the chosen ones,
-* the valiant knights of programming who toil away, without rest,
-* fixing our most awful code. To you, true saviors, kings of men,
-* I say this: never gonna give you up, never gonna let you down,
-* never gonna run around and desert you. Never gonna make you cry,
-* never gonna say goodbye. Never gonna tell a lie and hurt you.
-"""
 strheb=u"אבגדהוזחטיכךלמםנןסעפףצץקרשת"
 strheb+="qw"
 originalkeyboard=[4,22,12,11,23,6,20,16,5,15,13,18,17,25,8,24,7,11,14,9,19,16,18,2,3,10,17,0,1]
